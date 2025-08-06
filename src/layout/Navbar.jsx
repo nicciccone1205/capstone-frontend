@@ -7,6 +7,7 @@ export default function Navbar() {
   return (
     <header id="navbar">
       <NavLink id="brand" to="/">
+
         <p>3 Jewels</p>
       </NavLink>
       <nav>
@@ -16,9 +17,11 @@ export default function Navbar() {
         <NavLink to="/jewelrypage">Jewelry</NavLink>
         <NavLink to="/orders">Orders</NavLink>
         <NavLink to="/purchases">Purchases</NavLink>
+          <NavLink to="/register">Register</NavLink>
         </>  
         ) : (
           <NavLink to="/login">Log in</NavLink>
+  
         )}
        
       </nav>

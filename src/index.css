@@ -1,0 +1,14 @@
+main {
+    display: grid;
+    gap: 2ch;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Garamond, serif;
+  }
+
+  button {
+    padding: 0.25rem 0.5rem;
+  }
+  
