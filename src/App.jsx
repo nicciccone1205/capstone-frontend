@@ -9,16 +9,18 @@ import JewelryPurchase from "./jewelry/JewelryPurchase"
 
 export default function App() {
   return (
+     <>
+     <Layout />
+   
     <Routes>
-      <Route element={<Layout />}>
-      <Route path="/" element={<HomePage/>} />
-      <Route path="/jewelry" element ={<JewelryPage/>} />
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/jewelry" element ={<JewelryPage/>}/>
+
       <Route path="/order" element = {<JewelryOrder/>}/>
       <Route path = "/purchase" element= {<JewelryPurchase/>}/>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        
-      </Route>
     </Routes>
+  </>
   );
 }
