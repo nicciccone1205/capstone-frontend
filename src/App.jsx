@@ -10,10 +10,10 @@ export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-      <Route path="/" element ={<JewelryPage/>} />
+      <Route index element={<p>Home page</p>} />
+      <Route path="jewelry" element ={<JewelryPage/>} />
       <Route path="/order" element = {<JewelryOrder/>}/>
       <Route path = "/purchase" element= {<JewelryPurchase/>}/>
-        <Route index element={<p>Home page</p>} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         

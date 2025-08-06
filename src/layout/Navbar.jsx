@@ -10,7 +10,7 @@ export default function Navbar() {
         <p>3 Jewels</p>
       </NavLink>
       <nav>
-        {token ? (
+        {!token ? (
            <>
             <button onClick={logout}>Log out</button>
         <NavLink to="/jewelrypage">Jewelry</NavLink>
