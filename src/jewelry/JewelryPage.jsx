@@ -1,11 +1,13 @@
 import React from "react";
 import {Link} from "react-router";
 
-export default function JeweleryPage() {
+import JewelryList from "./JewelryList";
+
+export default function JewelryPage() {
     return(
         <div>
             <h1>Welcome to 3 Jewels!</h1>
-            <Link to = "/order">Go to order page</Link>
+            <JewelryList />
         </div>
     );
 }

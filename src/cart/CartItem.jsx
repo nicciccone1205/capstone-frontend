@@ -1,4 +1,4 @@
-import CartItemQuantity from "./CartItemQuantity";
+import CartItemQty from "./CartItemQty";
 
 export default function CartItem({ item, removeFromCart, addToCart }) {
   return (
@@ -6,7 +6,7 @@ export default function CartItem({ item, removeFromCart, addToCart }) {
       <div>
         {item.image} {item.name}
       </div>
-      <CartItemQuantity
+      <CartItemQty
         item={item}
         removeFromCart={removeFromCart}
         addToCart={addToCart}
