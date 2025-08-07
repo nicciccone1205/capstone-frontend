@@ -11,10 +11,10 @@ export default function Login() {
   const [error, setError] = useState(null);
 
   const onLogin = async (formData) => {
-    const username = formData.get("username");
+    const email = formData.get("email");
     const password = formData.get("password");
     try {
-      await login({ username, password });
+      await login({ email, password });
       navigate("/");
     } catch (e) {
       setError(e.message);
@@ -26,8 +26,8 @@ export default function Login() {
       <h1>Log in to your account</h1>
       <form action={onLogin}>
         <label>
-          Username
-          <input type="username" name="username" required />
+          Email
+          <input type="email" name="username" required />
         </label>
         <label>
           Password
@@ -36,7 +36,7 @@ export default function Login() {
         <button>Login</button>
         {error && <output>{error}</output>}
       </form>
-      <Link to="/register">Need an account? Register here.</Link>
+      <Link to="/register"><p>Need an account? Register here.</p></Link>
     </>
   );
 }

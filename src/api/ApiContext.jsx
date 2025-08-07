@@ -1,9 +1,5 @@
-/**
- * ApiContext attaches the user's authentication token to API requests when possible.
- * It also handles tags to refresh appropriate queries after a mutation.
- */
-
 import { createContext, useContext, useState } from "react";
+
 import { useAuth } from "../auth/AuthContext";
 
 export const API = import.meta.env.VITE_API_URL;

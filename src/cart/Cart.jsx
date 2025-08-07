@@ -1,7 +1,5 @@
 import CartItem from "./CartItem";
 
-import "./cart.css";
-
 export default function Cart({ cart, removeFromCart, addToCart }) {
   return (
     <section className="cart">
@@ -22,6 +20,7 @@ export default function Cart({ cart, removeFromCart, addToCart }) {
           </ul>
         </>
       )}
+      <br />
     </section>
   );
 }

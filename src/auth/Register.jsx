@@ -11,10 +11,11 @@ export default function Register() {
   const [error, setError] = useState(null);
 
   const onRegister = async (formData) => {
-    const username = formData.get("username");
+    const name = formData.get("name");
+    const email = formData.get("email");
     const password = formData.get("password");
     try {
-      await register({ username, password });
+      await register({ name, email, password });
       navigate("/");
     } catch (e) {
       setError(e.message);
@@ -26,8 +27,12 @@ export default function Register() {
       <h1>Register for an account</h1>
       <form action={onRegister}>
         <label>
-          Username
-          <input type="text" name="username" />
+          Name
+          <input type="text" name="name" />
+        </label>
+        <label>
+          Email
+          <input type="text" name="email" />
         </label>
         <label>
           Password
@@ -36,7 +41,8 @@ export default function Register() {
         <button>Register</button>
         {error && <output>{error}</output>}
       </form>
-      <Link to="/login">Already have an account? Log in here.</Link>
+      <br />
+      <Link to="/login"><p>Already have an account? Log in here.</p></Link>
     </>
   );
 }
