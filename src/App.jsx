@@ -14,10 +14,10 @@ export default function App() {
    
     <Routes>
       <Route path="/" element={<HomePage/>}/>
-      <Route path="/jewelry" element ={<JewelryPage/>}/>
+      <Route path="/jewelrypage" element ={<JewelryPage/>}/>
 
-      <Route path="/order" element = {<JewelryOrder/>}/>
-      <Route path = "/purchase" element= {<JewelryPurchase/>}/>
+      <Route path="/orders" element = {<JewelryOrder/>}/>
+      <Route path = "/purchases" element= {<JewelryPurchase/>}/>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
     </Routes>

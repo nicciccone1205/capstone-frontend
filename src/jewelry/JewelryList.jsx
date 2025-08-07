@@ -1,31 +1,31 @@
 import { Link } from "react-router";
 
-import useQuery from "../api/useQuery";
+//import useQuery from "../api/useQuery";
 
-import { jewels as test } from "./JewelryDummyData.js";
+import { products } from "./JewelryDummyData.js";
 
 import { useState, useEffect } from "react";
 
 export default function JewelryList() {
-    const {
-      data: jewels = test,
-      loading,
-      error,
-    } = useQuery("/jewelry", "jewelry");
+    // const {
+    //   data: jewels,
+    //   loading,
+    //   error,
+    // } = useQuery("/jewelrypage", "jewelrypage");
   
     return (
       <ul>
-        {jewels.map((jewel) => (
-          <JewelryListItem key={jewel.id} jewel={jewel} />
+        {products.map((product) => (
+          <JewelryListItem key={product.id} product={product} />
         ))}
       </ul>
     );
   }
   
-function JewelryListItem({ jewel }) {
+function JewelryListItem({ product }) {
     return (
         <li>
-            <h2><Link to={"/jewelry/" + jewel.id}>{jewel.name}</Link></h2>
+            <h2><Link to={"/jewelrypage/" + product.id}>{product.title}</Link></h2>
         </li>
       );
     }
