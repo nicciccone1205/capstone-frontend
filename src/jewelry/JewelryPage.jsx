@@ -12,8 +12,6 @@ export default function JewelryPage() {
             <Link to = "/order">Go to order page</Link>
             <Cart
                 cart={[]}/>
-
-            <br />            <br />
             <JewelryList />
         </div>
         
