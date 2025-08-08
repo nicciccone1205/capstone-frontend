@@ -11,12 +11,13 @@ import { products } from "./JewelryDummyData.js";
 
 export default function JewelryDetails() {
   const { token } = useAuth();
+  const {addItems } = useCart();
   const { id } = useParams();
   const [product, setProduct] = useState();
   useEffect(()=>{
-    console.log(products, id);
+    //console.log(products, id);
     setProduct(products.find((item) => item.id == id))
-    console.log(product);
+    //console.log(product);
   }
     , [])
   // const {

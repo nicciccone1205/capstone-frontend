@@ -10,8 +10,7 @@ export default function JewelryPage() {
 
             <h1>Our Jewelry</h1>
             <Link to = "/order">Go to order page</Link>
-            <Cart
-                cart={[]}/>
+           
             <JewelryList />
         </div>
         

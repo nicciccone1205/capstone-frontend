@@ -1,6 +1,6 @@
 import CartItemQty from "./CartItemQuantity";
 
-export default function CartItem({ item, removeFromCart, addToCart }) {
+export default function CartItem({ item, removeItems, addItems }) {
   return (
     <li className="cart-item">
       <div>
@@ -8,8 +8,8 @@ export default function CartItem({ item, removeFromCart, addToCart }) {
       </div>
       <CartItemQty
         item={item}
-        removeFromCart={removeFromCart}
-        addToCart={addToCart}
+        removeItems={removeItems}
+        addItems={addItems}
       />
     </li>
   );
