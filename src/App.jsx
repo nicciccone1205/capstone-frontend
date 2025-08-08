@@ -8,6 +8,8 @@ import JewelryDetails from "./jewelry/JewelryDetails";
 import JewelryOrders from "./jewelry/JewelryOrders"
 import Checkout from "./jewelry/Checkout"
 
+
+
 export default function App() {
   return (
      <>
@@ -23,5 +25,8 @@ export default function App() {
         <Route path="/login" element={<Login />} />
     </Routes>
   </>
-  );
+  )
 }
+
+
+

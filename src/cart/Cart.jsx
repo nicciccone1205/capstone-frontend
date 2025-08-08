@@ -1,6 +1,8 @@
 import CartItem from "./CartItem";
+import { useCart } from "./CartContext";
 
-export default function Cart({ cart, removeFromCart, addToCart }) {
+export default function Cart() {
+  const {cart, addItems,removeItems} = useCart();
   return (
     <section className="cart">
       <h2>Cart</h2>
@@ -13,8 +15,8 @@ export default function Cart({ cart, removeFromCart, addToCart }) {
               <CartItem
                 key={item.id}
                 item={item}
-                addToCart={addToCart}
-                removeFromCart={removeFromCart}
+                addItems={addItems}
+                removeItems={removeItems}
               />
             ))}
           </ul>
