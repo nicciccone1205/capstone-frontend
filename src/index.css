@@ -104,3 +104,10 @@ main {
     margin: auto;
     max-height: 500px;
 }
+
+.cart-item-quantity {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  width: 100px;
+}

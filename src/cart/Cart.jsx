@@ -3,6 +3,7 @@ import { useCart } from "./CartContext";
 
 export default function Cart() {
   const {cart, addItems,removeItems} = useCart();
+  const total = cart.reduce((total, item) => total + item.price * item.quantity, 0);
   return (
     <section className="cart">
       <h2>Cart</h2>
@@ -20,6 +21,7 @@ export default function Cart() {
               />
             ))}
           </ul>
+          <p>Total: ${total}</p>
         </>
       )}
       <br />
