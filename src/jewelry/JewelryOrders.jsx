@@ -4,14 +4,12 @@ import { useAuth } from "../auth/AuthContext";
 import useQuery from "../api/useQuery";
 
 export default function JewelryOrders() {
-    const { token } = useAuth();
-        const {
-          data: orders,
-          loading,
-          error,
-        } = useQuery("/orders", "orders")
-    if (loading) return <p>Loading...</p>;
-    if (error || !order) return <p>Sorry! {error}</p>;
+    // const { token } = useAuth();
+    //     const {
+    //       data: orders,
+    //       loading,
+    //       error,
+    //     } = useQuery("/orders", "orders")
     return(
         <div>
             <h1>Your order history!</h1>
