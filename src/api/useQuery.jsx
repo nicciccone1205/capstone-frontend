@@ -15,6 +15,7 @@ export default function useQuery(resource, tag) {
 
     try {
       const result = await request(resource);
+      
       setData(result);
     } catch (e) {
       console.error(e);

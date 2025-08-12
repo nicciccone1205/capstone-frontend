@@ -11,7 +11,7 @@ export default function Navbar() {
         <p>3 Jewels</p>
       </NavLink>
       <NavLink to="/jewelrypage">Jewelry</NavLink>
-        <NavLink to="/orders">Order History</NavLink>
+        <NavLink to="/orderhistory">Order History</NavLink>
         <NavLink to="/purchases">Checkout</NavLink>
         {token ? (
           <>

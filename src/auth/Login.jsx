@@ -27,7 +27,7 @@ export default function Login() {
       <form action={onLogin}>
         <label>
           Email
-          <input type="email" name="username" required />
+          <input type="email" name="email" required />
         </label>
         <label>
           Password

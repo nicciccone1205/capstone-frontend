@@ -1,18 +1,19 @@
 import { Link } from "react-router";
 
-//import useQuery from "../api/useQuery";
+import useQuery from "../api/useQuery";
 
-import { products } from "./JewelryDummyData.js";
+// import { products } from "./JewelryDummyData.js";
 
 import { useState, useEffect } from "react";
 
 export default function JewelryList() {
-    // const {
-    //   data: jewels,
-    //   loading,
-    //   error,
-    // } = useQuery("/jewelrypage", "jewelrypage");
-  
+    const {
+      data: products,
+      loading,
+      error,
+    } = useQuery("/products", "products");
+    if (loading) return <p>Loading...</p>;
+    if (error || !products) return <p>Sorry! {error}</p>;
     return (
       <ul>
         {products.map((product) => (

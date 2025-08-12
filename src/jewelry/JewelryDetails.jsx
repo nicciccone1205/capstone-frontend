@@ -1,33 +1,33 @@
 import { useState, useEffect } from "react";
 
-import { useCart } from "../cart/CartContext";
+import { useCart } from "../cart/CartContext.jsx";
 
 import { useNavigate, useParams } from "react-router";
-import useQuery from "../api/useQuery";
-import useMutation from "../api/useMutation";
-import { useAuth } from "../auth/AuthContext";
+import useQuery from "../api/useQuery.jsx";
+import useMutation from "../api/useMutation.jsx";
+import { useAuth } from "../auth/AuthContext.jsx";
 
 import { products } from "./JewelryDummyData.js";
 
 export default function JewelryDetails() {
   const { token } = useAuth();
-  const {addItems } = useCart();
+  const { addItems } = useCart();
   const { id } = useParams();
-  const [product, setProduct] = useState();
-  useEffect(()=>{
-    //console.log(products, id);
-    setProduct(products.find((item) => item.id == id))
-    //console.log(product);
-  }
-    , [])
-  // const {
-  //   data: product,
-  //   loading,
-  //   error,
-  // } = useQuery(`/jewelrypage/${id}`, "product");
+  // const [product, setProduct] = useState();
+  // useEffect(()=>{
+  //   console.log(products, id);
+  //   setProduct(products.find((item) => item.id == id))
+  //   console.log(product);
+  // }
+  //   , [])
+  const {
+    data: product,
+    loading,
+    error,
+  } = useQuery(`/products/${id}`, "product");
 
-  // if (loading) return <p>Loading...</p>;
-  // if (error || !product) return <p>Sorry! {error}</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error || !product) return <p>Sorry! {error}</p>;
 
   return (
     <>
@@ -39,7 +39,6 @@ export default function JewelryDetails() {
       <br />
       <img src={product?.image ? product.image : "Not available"}/>
       <br />
-      {/* {token && */}
       <button onClick={() => addItems(product)}>Add Item</button>
     </>
   );
