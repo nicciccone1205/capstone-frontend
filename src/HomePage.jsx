@@ -10,7 +10,8 @@ export default function HomePage () {
           style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px' }}
         />
       </a>
-            <p>Browse our selections of earrings, necklaces, and watches...</p>
+        <br />
+            <p>Click the pic to browse our selections of earrings, necklaces, and watches...</p>
             
         </>
         

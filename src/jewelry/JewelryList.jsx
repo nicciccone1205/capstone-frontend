@@ -26,7 +26,7 @@ export default function JewelryList() {
 function JewelryListItem({ product }) {
     return (
         <li>
-            <h2><Link to={"/jewelrypage/" + product.id}>{product.title}</Link></h2>
+            <p><Link to={"/jewelrypage/" + product.id}>{product.title}</Link></p>
         </li>
       );
     }
